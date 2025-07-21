@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Techspire</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    #menu-btn.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(10px);
+    }
+
+    #menu-btn.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    #menu-btn.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-10px);
+    }
+  </style>
+    <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body class="bg-white text-neutral-900">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-5 left-1/2 transform -translate-x-1/2 
+              bg-white/70 backdrop-blur-md px-8 py-4 rounded-full 
+              flex items-center justify-between max-w-[95%] md:max-w-[900px] w-full z-50 
+              border border-neutral-200 shadow-lg transition-all duration-300 ease-in-out 
+              translate-y-0 opacity-100">
+    <a href="#" class="flex items-center space-x-3">
+      <img src="1.png" alt="Techspire Logo" class="h-9 w-auto" />
+    </a>
+    <div class="hidden md:flex space-x-3 text-base font-normal text-neutral-800">
+      <a href="#" class="px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Home</a>
+      <a href="#" class="px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">About</a>
+      <a href="#" class="px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Services</a>
+      <a href="#" class="px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Contact</a>
+    </div>
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-neutral-900 focus:outline-none relative w-7 h-7">
+        <span class="block absolute h-0.5 w-full bg-current transform transition duration-300 ease-in-out top-1"></span>
+        <span class="block absolute h-0.5 w-full bg-current transform transition duration-300 ease-in-out top-3"></span>
+        <span class="block absolute h-0.5 w-full bg-current transform transition duration-300 ease-in-out top-5"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-24 left-1/2 transform -translate-x-1/2 scale-y-0 opacity-0 transition-all duration-300 ease-in-out
+              bg-white/90 backdrop-blur-md rounded-xl shadow-lg w-11/12 max-w-sm z-40 border border-neutral-200 
+              origin-top overflow-hidden md:hidden">
+    <ul class="flex flex-col space-y-3 p-6 text-center text-base font-normal text-neutral-800">
+      <li><a href="#" class="block px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Home</a></li>
+      <li><a href="#" class="block px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">About</a></li>
+      <li><a href="#" class="block px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Services</a></li>
+      <li><a href="#" class="block px-5 py-2 rounded-full hover:bg-neutral-100 hover:ring-2 hover:ring-blue-900 transition">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-white pt-40 pb-0 text-center">
+  <div class="max-w-3xl mx-auto px-4">
+    <h1 class="font-light text-neutral-900 tracking-tight leading-snug md:leading-tight mb-6">
+      <span class="block text-2xl sm:text-3xl md:text-5xl mb-2">Transforming Everyday Spaces</span>
+      <span class="block text-3xl sm:text-4xl md:text-5xl font-light my-4">with Intelligent</span>
+      <span class="block text-2xl sm:text-3xl md:text-5xl mt-2">Solutions</span>
+    </h1>
+    <p class="text-base sm:text-lg md:text-xl text-neutral-600 font-light mb-6 leading-relaxed">
+      Delivering solutions that make life smarter, safer, and simpler.
+    </p>
+    <a href="#services" class="inline-block px-8 py-3 rounded-full text-base sm:text-lg font-semibold 
+      text-white bg-gradient-to-r from-blue-900 to-[#ad00a1] hover:from-[#ad00a1] hover:to-blue-900 
+      transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-in-out 
+      shadow-md hover:shadow-xl mb-8">
+      Explore Services
+    </a>
+  </div>
+</section>
+
+
+  <!-- Video Section -->
+  <section class="relative w-screen h-[40vh] overflow-hidden mt-0">
+    <video autoplay muted loop playsinline class="w-full h-full object-cover  sm:block">
+      <source src="./0_Purple_Abstract_1920x1080.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="absolute inset-0 flex items-center justify-center px-4 sm:bg-transparent">
+      <div class="reveal opacity-0 translate-y-10 transition-all duration-1000 ease-in-out text-center">
+        <h2 class="text-base sm:text-xl md:text-2xl font-light text-white max-w-3xl drop-shadow-md">
+          Techspire empowers businesses with smart AI, IoT, and SaaS solutions for seamless digital growth.
+        </h2>
+      </div>
+    </div>
+  </section>
+<section class="bg-gray-50 py-20">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-light text-gray-900 mb-6">
+      Built with <span class="text-violet-600">Purpose</span>
+    </h2>
+    <p class="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+      We put technology to work for everyone by designing smart solutions that automate the mundane, 
+      solve real-world problems, and make everyday life smarter, safer, and simpler.
+    </p>
+  </div>
+</section>
+
+<section class="bento-techspire">
+  <div class="max-w-7xl mx-auto text-center mb-16 underline-container">
+    <h2 class="text-3xl sm:text-4xl font-light text-black mb-4">
+      Explore Our
+      <span class="relative inline-block ml-2 pb-4">
+        <span class="text-3xl sm:text-4xl font-light text-black">Core Capabilities</span>
+        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-900 to-purple-600"></span>
+      </span>
+    </h2>
+    <p class="text-gray-700 text-base sm:text-lg font-light max-w-2xl mx-auto">
+      We provide a flexible set of intelligent capabilities designed to enhance safety, access, and control across everyday spaces. Use them individually or combine them into powerful solutions — all powered by Wowlyx.
+    </p>
+  </div>
+
+  <div class="grid-features-new">
+
+    <div class="bento-card cloud">
+      <div class="bento-card-description">
+        <h2>License Plate Recognition</h2>
+        <p>Automate vehicle entry and create secure access logs.</p>
+      </div>
+    </div>
+
+    <div class="bento-card device">
+      <div class="bento-card-description">
+        <h2>Face Recognition</h2>
+        <p>Enable identity verification for touchless access and monitoring.</p>
+      </div>
+    </div>
+
+    <div class="bento-card logo">
+      <div class="bento-card-description">
+        <h2>Smart Gate Access</h2>
+        <p>Open or restrict gates automatically using verified identities.</p>
+      </div>
+    </div>
+
+    <div class="bento-card inbox">
+      <div class="bento-card-description">
+        <h2>CCTV Monitoring</h2>
+        <p>Watch live feeds, detect anomalies, and get real-time alerts.</p>
+      </div>
+    </div>
+
+    <div class="bento-card ai-gen">
+      <div class="bento-card-description">
+        <h2>Parking Management</h2>
+        <p>Track availability, log usage, and manage parking effortlessly.</p>
+      </div>
+    </div>
+
+    <div class="bento-card device-2">
+      <div class="bento-card-description">
+        <h2>Visitor Management</h2>
+        <p>Allow guests to check in using QR, face, or vehicle data.</p>
+      </div>
+    </div>
+
+    <div class="bento-card cloud">
+      <div class="bento-card-description">
+        <h2>Virtual Patrolling</h2>
+        <p>Simulate patrol routes with AI-powered video analysis.</p>
+      </div>
+    </div>
+
+    <div class="bento-card device">
+      <div class="bento-card-description">
+        <h2>Workflow Automation</h2>
+        <p>Respond to events instantly with automated actions and alerts.</p>
+      </div>
+    </div>
+
+    <div class="bento-card logo">
+      <div class="bento-card-description">
+        <h2>Sensor Integration</h2>
+        <p>Use smart sensors to trigger responses and collect real-time data.</p>
+      </div>
+    </div>
+
+    <div class="bento-card inbox">
+      <div class="bento-card-description">
+        <h2>Dashboards and Notifications</h2>
+        <p>Monitor everything that matters from one connected view.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-10">
+    <h3 class="text-2xl sm:text-3xl font-light text-gray-900 mb-4">
+      Built to fit. Ready to grow.
+    </h3>
+    <p class="text-gray-700 text-base sm:text-lg max-w-2xl mx-auto">
+      Every capability runs on Wowlyx, our vision-first intelligence platform. You choose what you need — we help you put it to work.
+    </p>
+  </div>
+</section>
+
+
+<style>.bento-techspire {
+  margin: 4rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.section-title h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #3a3e61;
+  margin-bottom: 3rem;
+}
+
+.section-title span {
+  color: #4dd9d6;
+}
+
+.grid-features-new {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "cloud cloud logo"
+    "device inbox logo"
+    "device-2 ai-gen ai-gen";
+  grid-gap: 2rem;
+}
+
+/* Grid Areas for Desktop */
+.cloud { grid-area: cloud; background-image: linear-gradient(-225deg, #e0f7fa 0%, #b2ebf2 100%); }
+.device { grid-area: device; background-image: linear-gradient(-225deg, #fafafa 0%, #d7fffe 100%); }
+.logo { grid-area: logo; background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%); }
+.logo h2 { color: #38a5a2; }
+.inbox { grid-area: inbox; background-image: linear-gradient(-225deg, #ffffff 0%, #dacceb 100%); }
+.inbox h3 { color: #8b5cca; }
+.ai-gen { grid-area: ai-gen; background-image: linear-gradient(-225deg, #ffffff 0%, #e0e0e0 100%); }
+.device-2 { grid-area: device-2; background-image: linear-gradient(-225deg, #f0f0f0 0%, #e0e0e0 100%); }
+
+/* Card Styles */
+.bento-card {
+  border-radius: 2.5rem;
+  padding: 2rem;
+  min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #fff;
+  color: #060633;
+  box-shadow: 0 20px 30px -10px rgba(16, 16, 39, 0.07);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Card Content */
+.bento-card-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bento-card h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: -1px;
+  margin: 0;
+  color: #3a3e61;
+}
+
+.bento-card h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0;
+  color: #3a3e61;
+}
+
+.bento-card p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #4b556b;
+  margin: 0;
+}
+
+.icon {
+  font-size: 2.5rem;
+}
+
+/* Contact Button */
+.contact-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #4dd9d6;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #38a5a2;
+}
+
+/* Responsive: Stack Cards on Tablets & Mobiles */
+@media (max-width: 1024px) {
+  .grid-features-new {
+    grid-template-areas: none;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .cloud, .device, .logo, .inbox, .ai-gen, .device-2 {
+    grid-area: unset;
+    background-size: cover;
+  }
+}</style>
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<style>
+.scroll-underline {
+  transition: transform 0.2s ease-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ✅ GSAP & ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ===== Section Wrapper ===== */
+#portfolio-cards {
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* Gradient Background Blobs */
+#portfolio-cards::before,
+#portfolio-cards::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(200px);
+    z-index: 0;
+    opacity: 0.3;
+}
+#portfolio-cards::before {
+    top: -150px; left: -150px;
+    background: #dbeafe;
+}
+#portfolio-cards::after {
+    bottom: -150px; right: -150px;
+    background: #f3e8ff;
+}
+
+/* ===== Heading ===== */
+
+/* ===== Grid Container ===== */
+#animation-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    z-index: 1;
+    perspective: 1000px;
+}
+
+/* ===== Card Design ===== */
+.card {
+    width: 100%;
+    max-width: 380px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    border-radius: 20px;
+    overflow: hidden;
+    transform: translateY(60px);
+    opacity: 0;
+    cursor: pointer;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+}
+
+/* Hover Glow Effect */
+@media (hover: hover) {
+    .card:hover {
+        transform: scale(1.03) translateY(-4px);
+        box-shadow: 0 16px 40px rgba(99, 102, 241, 0.2),
+                    0 20px 50px rgba(168, 85, 247, 0.15);
+    }
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Card Content */
+.card-content {
+    padding: 1.5rem;
+    text-align: left;
+}
+.card-category {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #6366f1;
+    margin-bottom: 8px;
+    letter-spacing: 1.5px;
+}
+.card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+.card-description {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.card-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.skill-tag {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+.skill-tag:hover {
+    background: #6366f1;
+    color: #fff;
+}
+
+/* ===== Underline Animation ===== */
+.scroll-underline {
+    height: 3px;
+    background: linear-gradient(to right, #1e3a8a, #7e22ce);
+    display: block;
+}
+
+/* ===== Ending Section ===== */
+.ending-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #8b5cf6, #9333ea);
+  color: #fff;
+  border-radius: 1rem;
+  margin: 3rem auto 0;
+  max-width: 900px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.ending-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.ending-section p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.ending-section .cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #9333ea;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.ending-section .cta-btn:hover {
+  background: #f3e8ff;
+  color: #7e22ce;
+}
+</style>
+
+<section id="portfolio-cards">
+  <div class="max-w-7xl mx-auto text-center mb-16 underline-container">
+    <h2 class="text-3xl sm:text-4xl font-light text-black mb-4">
+      <span class="relative inline-block ml-2 pb-4">
+        <span class="text-3xl sm:text-4xl font-light text-black">Solutions</span>
+        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-900 to-purple-600"></span>
+      </span>
+        in Action
+    </h2>
+
+    <p class="text-gray-700 text-base sm:text-lg font-light">
+      Empowering businesses through smart, scalable, and intelligent solutions. 
+    </p>
+  </div>
+
+  <div id="animation-container">
+    <!-- ✅ Cards -->
+    <div class="card">
+      <img src="./futuristic-portrait-young-girl-with-high-tech.jpg" alt="Smart School">
+      <div class="card-content">
+        <div class="card-category">Smart School</div>
+        <div class="card-title">KiDQ</div>
+        <div class="card-description">AI-powered student pickup for safe, fast dispersals.</div>
+        <div class="card-skills">
+          <span class="skill-tag">AI Safety</span>
+          <span class="skill-tag">Guardian ID</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./man-working-computer-with-data-analysis-security-screen.jpg" alt="AI Command Center">
+      <div class="card-content">
+        <div class="card-category">AI Security</div>
+        <div class="card-title">WatchTower</div>
+        <div class="card-description">Real-time alerts and centralized security dashboards.</div>
+        <div class="card-skills">
+          <span class="skill-tag">AI Alerts</span>
+          <span class="skill-tag">Live Feeds</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./driving-night-touch-screen-controls-car-generated-by-ai.jpg" alt="Parking Automation">
+      <div class="card-content">
+        <div class="card-category">Smart Parking</div>
+        <div class="card-title">GatePass</div>
+        <div class="card-description">Automated parking & entry using license plate recognition.</div>
+        <div class="card-skills">
+          <span class="skill-tag">LPR</span>
+          <span class="skill-tag">IoT Control</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./high-tech-travel-future-time.jpg" alt="Visitor Management">
+      <div class="card-content">
+        <div class="card-category">Visitor Management</div>
+        <div class="card-title">VisitorPass</div>
+        <div class="card-description">Touchless check-in with advanced verification systems.</div>
+        <div class="card-skills">
+          <span class="skill-tag">Face ID</span>
+          <span class="skill-tag">QR Check-In</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ending-section">
+  <h2>Ready to Transform Your Business?</h2>
+  <p>
+    Leverage <strong>Wowlyx</strong> and <strong>Techspire’s</strong> intelligent solutions to achieve real-time insights,
+    smarter automation, and seamless integration for your enterprise.
+  </p>
+  <a href="https://wowlyx.com" target="_blank" class="cta-btn">Get Started Today →</a>
+</div>
+
+<style>
+/* ✅ Ending Section Styles */
+.ending-section {
+  text-align: center;
+  padding: 4rem 1rem 6rem; /* ✅ Increased bottom padding */
+  background: linear-gradient(135deg, #8b5cf6, #9333ea); /* Violet gradient */
+  color: #fff;
+  border-radius: 1rem;
+  margin: 3rem auto;
+  max-width: 900px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.ending-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.ending-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ✅ CTA Button */
+.cta-btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #8b5cf6;
+  background: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #f3e8ff;
+  transform: translateY(-2px);
+}
+</style>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Underline animation
+  gsap.from(".scroll-underline", {
+    width: 0,
+    duration: 1.2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".underline-container",
+      start: "top 80%"
+    }
+  });
+
+  // Card animations
+  const cards = gsap.utils.toArray('#animation-container .card');
+  gsap.set(cards, { opacity: 0, y: 80, rotateX: 10 });
+
+  cards.forEach((card, i) => {
+    gsap.to(card, {
+      opacity: 1,
+      y: 0,
+      rotateX: 0,
+      duration: 1,
+      ease: "power3.out",
+      delay: i * 0.15,
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  });
+
+  // Parallax effect for card grid
+  gsap.to("#animation-container", {
+    yPercent: -10,
+    scrollTrigger: {
+      trigger: ".ending-section",
+      start: "top 90%",
+      end: "bottom 60%",
+      scrub: true
+    }
+  });
+});
+</script>
+
+
+
+
+
+<section class="wowlyx-wrapper">
+  <!-- ✅ Heading & Subtitle Outside -->
+  <div class="wowlyx-header text-center mb-12">
+  <div class="max-w-7xl mx-auto text-center mb-16 underline-container">
+    <h2 class="text-3xl sm:text-4xl font-light text-black mb-4">
+      Let's
+      <span class="relative inline-block ml-2 pb-4">
+        <span class="text-3xl sm:text-4xl font-light text-black">Discover</span>
+        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-900 to-purple-600"></span>
+      </span>
+      all our Services.
+    </h2>
+    <p class="text-gray-700 text-base sm:text-lg font-light">
+      Empowering businesses through smart, scalable, and intelligent solutions.
+    </p>
+  </div>
+    </div>
+  </div>
+
+  <!-- ✅ Main Card Container -->
+  <div class="wowlyx-main-card">
+    <div class="wowlyx-grid">
+      <!-- Intro Card -->
+      <div class="wowlyx-card wowlyx-card--large">
+        <div class="wowlyx-icon"><i data-lucide="layers"></i></div>
+        <h2>Wowlyx Platform</h2>
+        <p>
+          A vision-first platform combining video analytics, IoT data, and AI workflows to manage environments in real time.
+        </p>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="wowlyx-card">
+        <div class="wowlyx-icon"><i data-lucide="eye"></i></div>
+        <h2>Vision Intelligence</h2>
+        <p>Gain insights from every frame using advanced vision-first architecture.</p>
+      </div>
+
+      <div class="wowlyx-card">
+        <div class="wowlyx-icon"><i data-lucide="monitor"></i></div>
+        <h2>Unified Video Analytics</h2>
+        <p>Turn video streams into actionable data with anomaly detection.</p>
+      </div>
+
+      <div class="wowlyx-card">
+        <div class="wowlyx-icon"><i data-lucide="target"></i></div>
+        <h2>Smarter Object Tracking</h2>
+        <p>Track and identify objects in real time with high accuracy.</p>
+      </div>
+
+      <div class="wowlyx-card">
+        <div class="wowlyx-icon"><i data-lucide="cpu"></i></div>
+        <h2>IoT Integration</h2>
+        <p>Connect IoT devices seamlessly for real-time decision-making.</p>
+      </div>
+
+      <div class="wowlyx-card">
+        <div class="wowlyx-icon"><i data-lucide="workflow"></i></div>
+        <h2>AI Workflow Automation</h2>
+        <p>Automate processes intelligently and deploy on edge or cloud.</p>
+      </div>
+
+      <div class="wowlyx-card wowlyx-card--wide">
+        <div class="wowlyx-icon"><i data-lucide="workflow"></i></div>
+        <h2>Advanced Deployment</h2>
+        <p>Flexible options for edge, cloud, or hybrid environments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Scripts -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+/* ✅ Brand Colors */
+:root {
+  --wowlyx-yellow: #FFD539;
+  --wowlyx-cream-1: #F8EFDB;
+  --wowlyx-cream-2: #FEFBF4;
+  --wowlyx-black: #000000;
+  --wowlyx-white: #FFFFFF;
+}
+
+/* ✅ Section Wrapper */
+.wowlyx-wrapper {
+  padding: 5rem 1rem;
+  background: var(--wowlyx-cream-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ Header Outside */
+.wowlyx-header {
+  max-width: 900px;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.wowlyx-buttons .btn-primary,
+.wowlyx-buttons .btn-outline {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--wowlyx-yellow);
+  color: var(--wowlyx-black);
+  box-shadow: 0 4px 10px rgba(255, 213, 57, 0.3);
+}
+
+.btn-primary:hover {
+  background: #ffcd00;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--wowlyx-black);
+  border: 2px solid var(--wowlyx-yellow);
+}
+
+.btn-outline:hover {
+  background: var(--wowlyx-yellow);
+  color: var(--wowlyx-black);
+}
+
+/* ✅ Main Card Container */
+.wowlyx-main-card {
+  background: var(--wowlyx-white);
+  border-radius: 2rem;
+  padding: 3rem;
+  max-width: 1300px;
+  width: 100%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ✅ Grid */
+.wowlyx-grid {
+  display: grid;
+  grid-template-columns: 4fr 3fr 3fr;
+  gap: 2rem;
+}
+
+/* ✅ Feature Cards */
+.wowlyx-card {
+  position: relative;
+  background: var(--wowlyx-white);
+  border-radius: 1.8rem;
+  padding: 2rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  opacity: 0; /* Animation start */
+  transform: translateY(40px);
+  transition: all 0.35s ease;
+}
+
+.wowlyx-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(255, 213, 57, 0.25);
+}
+
+/* ✅ Layout Variants */
+.wowlyx-card--large {
+  grid-area: 1 / 1 / 3 / 2;
+  background: var(--wowlyx-cream-1);
+}
+
+.wowlyx-card--wide {
+  grid-area: 3 / 2 / 4 / 4;
+  background: #fffbe6;
+}
+
+/* ✅ Icon */
+.wowlyx-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wowlyx-black);
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  background: var(--wowlyx-yellow);
+  box-shadow: 0 6px 16px rgba(255, 213, 57, 0.4);
+}
+
+/* ✅ Typography */
+.wowlyx-card h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--wowlyx-black);
+  margin: 0;
+}
+
+.wowlyx-card p {
+  color: #4b556b;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ✅ Gradient Border Hover */
+.wowlyx-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1.8rem;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--wowlyx-yellow), #ffc107);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.wowlyx-card:hover::after {
+  opacity: 1;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .wowlyx-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wowlyx-card--large,
+  .wowlyx-card--wide {
+    grid-area: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .wowlyx-grid {
+    grid-template-columns: 1fr;
+  }
+  .wowlyx-card {
+    padding: 1.8rem;
+  }
+  .wowlyx-card h2 {
+    font-size: 1.5rem;
+  }
+}
+</style>
+
+<script>
+lucide.createIcons();
+
+// ✅ GSAP Scroll Animation
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".wowlyx-card").forEach(card => {
+  gsap.fromTo(card,
+    { opacity: 0, y: 50, scale: 0.95 },
+    {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      duration: 0.8,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        end: "bottom 20%",
+        toggleActions: "play reverse play reverse"
+      }
+    }
+  );
+});
+</script>
+
+
+
+
+
+
+
+
+<section class="custom-solutions-wrapper">
+  <!-- ✅ Heading Outside -->
+  <div class="custom-header">
+  <div class="max-w-7xl mx-auto text-center mb-16 underline-container">
+    <h2 class="text-3xl sm:text-4xl font-light text-black mb-4">
+      Need something 
+      <span class="relative inline-block ml-2 pb-4">
+        <span class="text-3xl sm:text-4xl font-light text-black">Specific? </span>
+        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-900 to-purple-600"></span>
+      </span>
+    </h2>
+    <p class="text-gray-700 text-base sm:text-lg font-light">
+      We design and deliver custom AI and IoT solutions using the same platform and core capabilities.
+    </p>
+  </div>
+  </div>
+
+  <!-- ✅ Bento Grid -->
+  <div class="custom-bento-grid">
+    <!-- Large Card -->
+    <div class="custom-card custom-card--large">
+      <div class="custom-icon"><i data-lucide="settings"></i></div>
+      <h3>Smart Automation</h3>
+      <p>Tailored automation for unique spaces and operational needs.</p>
+    </div>
+
+    <!-- Medium Card -->
+    <div class="custom-card">
+      <div class="custom-icon"><i data-lucide="smartphone"></i></div>
+      <h3>Mobile & Web Apps</h3>
+      <p>Intuitive apps for real-time access and control across devices.</p>
+    </div>
+
+    <!-- Tall Card -->
+    <div class="custom-card custom-card--tall">
+      <div class="custom-icon"><i data-lucide="cpu"></i></div>
+      <h3>Device Integration</h3>
+      <p>Seamless connectivity and control for your IoT devices.</p>
+    </div>
+
+    <!-- Wide Card -->
+    <div class="custom-card custom-card--wide">
+      <div class="custom-icon"><i data-lucide="bar-chart"></i></div>
+      <h3>Live Dashboards</h3>
+      <p>Real-time dashboards and actionable reports for smarter decisions.</p>
+    </div>
+
+    <!-- Normal Card -->
+    <div class="custom-card">
+      <div class="custom-icon"><i data-lucide="cloud"></i></div>
+      <h3>Cloud or On-Site</h3>
+      <p>Flexible deployment—choose between cloud or on-premise setups.</p>
+    </div>
+  </div>
+
+  <!-- ✅ Buttons -->
+  <div class="custom-cta">
+    <a href="#" class="custom-btn primary">Start a Project</a>
+    <a href="#" class="custom-btn secondary">Talk to Us</a>
+  </div>
+</section>
+
+<script>
+  lucide.createIcons();
+
+  gsap.utils.toArray(".custom-card").forEach(card => {
+    gsap.fromTo(card,
+      { opacity: 0, y: 60, scale: 0.95 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",
+          end: "bottom 20%",
+          toggleActions: "play reverse play reverse"
+        }
+      }
+    );
+  });
+</script>
+
+<style>
+:root {
+  --custom-primary: #9333ea;
+  --custom-secondary: #ec4899;
+  --custom-bg: #faf5ff;
+}
+
+/* ✅ Section Wrapper */
+.custom-solutions-wrapper {
+  padding: 5rem 1rem;
+  background: var(--custom-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* ✅ Heading Block */
+.custom-header {
+  text-align: center;
+  max-width: 800px;
+}
+
+/* ✅ Bento Grid */
+.custom-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1300px;
+}
+
+/* ✅ Cards */
+.custom-card {
+  background: #fff;
+  border-radius: 1.8rem;
+  padding: 2rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.35s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(147, 51, 234, 0.25);
+}
+
+/* ✅ Icon */
+.custom-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(135deg, var(--custom-primary), var(--custom-secondary));
+  box-shadow: 0 6px 16px rgba(147, 51, 234, 0.4);
+}
+
+/* ✅ Typography */
+.custom-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.4rem;
+}
+
+.custom-card p {
+  color: #4b556b;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ✅ Special Sizes for Bento */
+.custom-card--large {
+  grid-column: span 2;
+  grid-row: span 2;
+  background: #fef3ff;
+}
+
+.custom-card--tall {
+  grid-row: span 2;
+}
+
+.custom-card--wide {
+  grid-column: span 2;
+}
+
+/* ✅ Buttons */
+.custom-cta {
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.custom-btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.custom-btn.primary {
+  background: linear-gradient(135deg, var(--custom-primary), var(--custom-secondary));
+  color: #fff;
+}
+
+.custom-btn.primary:hover {
+  transform: translateY(-2px);
+}
+
+.custom-btn.secondary {
+  background: #fff;
+  border: 2px solid var(--custom-primary);
+  color: var(--custom-primary);
+}
+
+.custom-btn.secondary:hover {
+  background: var(--custom-primary);
+  color: #fff;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .custom-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .custom-card--large,
+  .custom-card--tall,
+  .custom-card--wide {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+
+<section class="spaces-wrapper">
+  <div class="max-w-7xl mx-auto text-center mb-16 underline-container">
+    <h2 class="text-3xl sm:text-4xl font-light text-black mb-4">
+      <span class="relative inline-block ml-2 pb-4">
+        <span class="text-3xl sm:text-4xl font-light text-black">Spaces</span>
+        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-600 to-cyan-500"></span>
+      </span>
+      We Power
+    </h2>
+    <p class="text-gray-700 text-base sm:text-lg font-light">
+      We help teams across many sectors bring intelligence to their spaces.
+    </p>
+  </div>
+
+  <!-- ✅ Bento Grid -->
+  <div class="spaces-grid">
+    <!-- Large Hero Card -->
+    <div class="space-card large">
+      <div class="space-icon"><i data-lucide="school"></i></div>
+      <h3>Schools & Campuses</h3>
+      <p>AI-powered safety, attendance, and automated student dispersal.</p>
+    </div>
+
+    <!-- Tall Card -->
+    <div class="space-card tall">
+      <div class="space-icon"><i data-lucide="shield"></i></div>
+      <h3>Security Agencies</h3>
+      <p>Centralized video intelligence and rapid alert systems.</p>
+    </div>
+
+    <!-- Wide Card -->
+    <div class="space-card wide">
+      <div class="space-icon"><i data-lucide="home"></i></div>
+      <h3>Residential Communities</h3>
+      <p>Smart access control and visitor management for safe living.</p>
+    </div>
+
+    <!-- Square Cards -->
+    <div class="space-card">
+      <div class="space-icon"><i data-lucide="briefcase"></i></div>
+      <h3>Offices & Co-working</h3>
+      <p>Secure entry, smart parking, and automation for modern workspaces.</p>
+    </div>
+
+    <div class="space-card">
+      <div class="space-icon"><i data-lucide="building-2"></i></div>
+      <h3>Commercial Properties</h3>
+      <p>Integrated monitoring and automation for large complexes.</p>
+    </div>
+
+    <!-- Long Horizontal -->
+    <div class="space-card wide">
+      <div class="space-icon"><i data-lucide="utensils-crossed"></i></div>
+      <h3>Restaurants & Food Centers</h3>
+      <p>Queue management and smart kitchen monitoring.</p>
+    </div>
+
+    <!-- Extra -->
+    <div class="space-card tall">
+      <div class="space-icon"><i data-lucide="dumbbell"></i></div>
+      <h3>Sports Centers & Pools</h3>
+      <p>Safety compliance and real-time occupancy analytics.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- ✅ Styles -->
+<style>
+:root {
+  --bento-bg: #f8fafc;
+  --bento-card: #fff;
+  --accent-start: #2563eb; /* Blue-600 */
+  --accent-end: #06b6d4;   /* Cyan-500 */
+}
+
+.spaces-wrapper {
+  background: var(--bento-bg);
+  padding: 5rem 1rem;
+}
+
+.spaces-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ✅ Cards */
+.space-card {
+  background: var(--bento-card);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  opacity: 0; /* GSAP Animation start */
+  transform: translateY(40px);
+  position: relative;
+  overflow: hidden;
+}
+
+.space-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.6rem;
+}
+
+.space-card p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* ✅ Icon Styling */
+.space-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  color: #fff;
+  font-size: 1.6rem;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+.space-icon i {
+  width: 28px;
+  height: 28px;
+}
+
+/* ✅ Hover Effect */
+.space-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.4s ease;
+}
+.space-card:hover::after {
+  opacity: 0.08;
+}
+.space-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.25);
+}
+
+/* ✅ Shapes (Desktop Only) */
+.space-card.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.space-card.wide {
+  grid-column: span 2;
+}
+
+.space-card.tall {
+  grid-row: span 2;
+}
+
+/* ✅ Responsive Fix */
+@media (max-width: 1024px) {
+  .spaces-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reset special spans */
+  .space-card.large,
+  .space-card.wide,
+  .space-card.tall {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .spaces-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .space-card.large,
+  .space-card.wide,
+  .space-card.tall {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+</style>
+
+<!-- ✅ GSAP Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray('.space-card').forEach((card, i) => {
+    gsap.to(card, {
+      opacity: 1,
+      y: 0,
+      duration: 0.9,
+      delay: i * 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  });
+});
+</script>
+
+
+
+
+<section class="contact-wrapper">
+  <!-- ✅ Heading -->
+  <div class="max-w-7xl mx-auto text-center mb-12 underline-container">
+    <h2 class="text-3xl sm:text-4xl font-light text-gray-900 mb-4">
+      Get in 
+      <span class="relative inline-block ml-2 pb-4">
+        <span class="text-3xl sm:text-4xl font-light text-gray-900">Touch</span>
+        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-[#AD00A1]"></span>
+      </span>
+    </h2>
+    <p class="text-gray-700 text-base sm:text-lg font-light">
+      Let’s build something smart together.<br>
+      Whether you manage a gate, a facility, or a campus — we are here to help.
+    </p>
+  </div>
+
+  <!-- ✅ Bento Grid -->
+  <div class="contact-grid">
+    <!-- Email Card -->
+    <div class="contact-card">
+      <div class="contact-icon"><i data-lucide="mail"></i></div>
+      <h3>Email</h3>
+      <p><a href="mailto:hello@techspire.ai" class="contact-link">hello@techspire.ai</a></p>
+    </div>
+
+    <!-- Phone Card -->
+    <div class="contact-card">
+      <div class="contact-icon"><i data-lucide="phone"></i></div>
+      <h3>Phone</h3>
+      <p><a href="tel:+65XXXXXXXX" class="contact-link">+65 XXXX XXXX</a></p>
+    </div>
+
+    <!-- Location Card -->
+    <div class="contact-card">
+      <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+      <h3>Location</h3>
+      <p>Singapore</p>
+    </div>
+
+    <!-- Big Card -->
+    <div class="contact-card large">
+      <h3 class="mb-4 text-xl font-semibold">Ready to Get Started?</h3>
+      <p class="mb-6 text-gray-600 text-base">Choose an option below to connect with us.</p>
+      <div class="contact-buttons">
+        <a href="#demo" class="btn-primary">Request a Demo</a>
+        <a href="#contact" class="btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+:root {
+  --contact-bg: #f9fafb;
+  --contact-card: #fff;
+  --accent: #AD00A1; /* Main brand color */
+}
+
+.contact-wrapper {
+  background: var(--contact-bg);
+  padding: 5rem 1rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: var(--contact-card);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.contact-card.large {
+  grid-column: span 3;
+  text-align: center;
+}
+
+.contact-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.contact-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.6rem;
+  box-shadow: 0 6px 16px rgba(173, 0, 161, 0.3);
+}
+
+.contact-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(173, 0, 161, 0.25);
+}
+
+/* ✅ Buttons */
+.contact-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-primary,
+.btn-outline {
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #88007b;
+}
+
+.btn-outline {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-card.large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-card.large {
+    grid-column: span 1;
+  }
+}
+</style>
+
+<!-- ✅ GSAP Animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray('.contact-card').forEach((card, i) => {
+    gsap.to(card, {
+      opacity: 1,
+      y: 0,
+      duration: 0.9,
+      delay: i * 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ✅ Footer Section -->
+<section class="footer-section" id="footer">
+  <div class="footer-overlay"></div>
+  <div class="footer-wrapper">
+    
+    <!-- Brand Info -->
+    <div class="footer-brand">
+      <h3>Techspire Innovations Pte Ltd</h3>
+      <p>Smart solutions for everyday life</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="footer-meta">© 2025 | <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="https://wowlyx.com" target="_blank">Visit wowlyx.com</a></p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>About</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Our Mission</a>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-links">
+      <h4>Explore</h4>
+      <a href="#">Solutions</a>
+      <a href="#">Products</a>
+      <a href="#">Careers</a>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+/* ✅ Footer Base */
+.footer-section {
+  position: relative;
+  background: linear-gradient(135deg, #1f1b4d, #3b2e8f, #6d28d9);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  color: #f9fafb;
+  padding: 4rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* ✅ Animated Gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✅ Glass Overlay */
+.footer-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  z-index: 1;
+}
+
+/* ✅ Wrapper */
+.footer-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Brand Info */
+.footer-brand h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.footer-brand p {
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #facc15;
+  color: #000;
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* Meta Info */
+.footer-meta {
+  font-size: 0.9rem;
+  color: #a5b4fc;
+  margin-top: 1rem;
+}
+
+.footer-meta a {
+  color: #e0e7ff;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+.footer-meta a:hover {
+  color: #facc15;
+}
+
+/* Links */
+.footer-links h4 {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.footer-links a {
+  display: block;
+  color: #d1d5db;
+  font-size: 0.95rem;
+  text-decoration: none;
+  margin-bottom: 0.6rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: #facc15;
+  transition: width 0.3s;
+}
+
+.footer-links a:hover {
+  color: #facc15;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* ✅ Responsive */
+@media (max-width: 900px) {
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+}
+</style>
+
+
+
+
+
+
+<!-- SCROLL SCRIPT -->
+<script>
+  const fillAmounts = new Map();
+
+  document.querySelectorAll('.underline-container').forEach(container => {
+    fillAmounts.set(container, 0);
+  });
+
+  // Intersection Observer to track if a container is in view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const container = entry.target;
+      container.dataset.inView = entry.isIntersecting ? "true" : "false";
+    });
+  }, { threshold: 0.4 }); // 40% visible triggers in/out
+
+  document.querySelectorAll('.underline-container').forEach(container => observer.observe(container));
+
+  // Scroll event to gradually fill or reset
+  function updateUnderline() {
+    document.querySelectorAll('.underline-container').forEach(container => {
+      const underline = container.querySelector('.scroll-underline');
+      if (!underline) return;
+
+      let fill = fillAmounts.get(container) || 0;
+
+      if (container.dataset.inView === "true") {
+        // If in view, slowly fill
+        fill += 0.02;
+      } else {
+        // If out of view, faster reset
+        fill -= 0.05;
+      }
+
+      fill = Math.max(0, Math.min(1, fill)); // Clamp between 0 and 1
+      fillAmounts.set(container, fill);
+
+      underline.style.transform = `scaleX(${fill})`;
+    });
+
+    requestAnimationFrame(updateUnderline); // Smooth, frame-based updates
+  }
+
+  requestAnimationFrame(updateUnderline);
+</script>
+
+  <!-- Scroll Reveal Script -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    reveals.forEach(reveal => revealObserver.observe(reveal));
+  </script>
+
+  <!-- Navbar Scroll and Mobile Menu Control -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navbar = document.getElementById('navbar');
+    let lastScroll = window.scrollY;
+    let isOpen = false;
+
+    menuBtn.addEventListener('click', () => {
+      isOpen = !isOpen;
+      menuBtn.classList.toggle('open', isOpen);
+
+      mobileMenu.classList.toggle('scale-y-0', !isOpen);
+      mobileMenu.classList.toggle('opacity-0', !isOpen);
+      mobileMenu.classList.toggle('scale-y-100', isOpen);
+      mobileMenu.classList.toggle('opacity-100', isOpen);
+    });
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScroll && currentScroll > 50) {
+        navbar.classList.add('-translate-y-full', 'opacity-0');
+        navbar.classList.remove('translate-y-0', 'opacity-100');
+
+        if (isOpen) {
+          isOpen = false;
+          menuBtn.classList.remove('open');
+          mobileMenu.classList.add('scale-y-0', 'opacity-0');
+          mobileMenu.classList.remove('scale-y-100', 'opacity-100');
+        }
+      } else {
+        navbar.classList.remove('-translate-y-full', 'opacity-0');
+        navbar.classList.add('translate-y-0', 'opacity-100');
+      }
+      lastScroll = currentScroll;
+    });
+  </script>
+
+</body>
+</html>
