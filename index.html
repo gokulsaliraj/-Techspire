@@ -117,9 +117,9 @@
 <section class="bento-techspire">
   <div class="max-w-7xl mx-auto text-center mb-16 underline-container">
     <h2 class="text-3xl sm:text-4xl font-light text-black mb-4">
-      Explore Our
+      Explore Our Core 
       <span class="relative inline-block ml-2 pb-4">
-        <span class="text-3xl sm:text-4xl font-light text-black">Core Capabilities</span>
+        <span class="text-3xl sm:text-4xl font-light text-black">Capabilities</span>
         <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-900 to-purple-600"></span>
       </span>
     </h2>
@@ -711,43 +711,51 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
-
-
-
 <section class="wowlyx-wrapper">
-  <!-- ✅ Heading & Subtitle Outside -->
+  <!-- ✅ Heading -->
   <div class="wowlyx-header text-center mb-12">
-  <div class="max-w-7xl mx-auto text-center mb-16 underline-container">
-    <h2 class="text-3xl sm:text-4xl font-light text-black mb-4">
-      Let's
-      <span class="relative inline-block ml-2 pb-4">
-        <span class="text-3xl sm:text-4xl font-light text-black">Discover</span>
-        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-900 to-purple-600"></span>
-      </span>
-      all our Services.
-    </h2>
-    <p class="text-gray-700 text-base sm:text-lg font-light">
-      Empowering businesses through smart, scalable, and intelligent solutions.
-    </p>
-  </div>
+    <div class="max-w-7xl mx-auto text-center mb-16 underline-container">
+      <h2 class="text-3xl sm:text-4xl font-light text-black mb-4">
+        Let's
+        <span class="relative inline-block ml-2 pb-4">
+          <span class="text-3xl sm:text-4xl font-light text-black">Discover</span>
+          <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-900 to-purple-600"></span>
+        </span>
+        all our Services.
+      </h2>
+      <p class="text-gray-700 text-base sm:text-lg font-light">
+        Empowering businesses through smart, scalable, and intelligent solutions.
+      </p>
     </div>
   </div>
 
   <!-- ✅ Main Card Container -->
   <div class="wowlyx-main-card">
-    <div class="wowlyx-grid">
-      <!-- Intro Card -->
-      <div class="wowlyx-card wowlyx-card--large">
-        <div class="wowlyx-icon"><i data-lucide="layers"></i></div>
-        <h2>Wowlyx Platform</h2>
-        <p>
+    <!-- ✅ Subheading -->
+    <div class="wowlyx-heading text-center mb-12">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-light text-gray-900 mb-6">
+          Wowlyx <span style="color:#ffd539; text-shadow: 0 2px 4px rgba(218, 218, 218, 0.2);">Platform</span>
+        </h2>
+        <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
           A vision-first platform combining video analytics, IoT data, and AI workflows to manage environments in real time.
         </p>
       </div>
+    </div>
 
-      <!-- Feature Cards -->
+    <!-- ✅ Grid -->
+    <div class="wowlyx-grid">
+      <!-- ✅ Large Card with Video -->
+      <div class="wowlyx-card wowlyx-card--large">
+        <div class="wowlyx-video">
+          <video autoplay muted loop playsinline>
+            <source src="./5123044_Security_Guard_Security_1280x720.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <!-- ✅ Feature Cards -->
       <div class="wowlyx-card">
         <div class="wowlyx-icon"><i data-lucide="eye"></i></div>
         <h2>Vision Intelligence</h2>
@@ -778,8 +786,8 @@ document.addEventListener('DOMContentLoaded', function() {
         <p>Automate processes intelligently and deploy on edge or cloud.</p>
       </div>
 
-      <div class="wowlyx-card wowlyx-card--wide">
-        <div class="wowlyx-icon"><i data-lucide="workflow"></i></div>
+      <div class="wowlyx-card ">
+        <div class="wowlyx-icon"><i data-lucide="layers"></i></div>
         <h2>Advanced Deployment</h2>
         <p>Flexible options for edge, cloud, or hybrid environments.</p>
       </div>
@@ -793,13 +801,12 @@ document.addEventListener('DOMContentLoaded', function() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 <style>
-/* ✅ Brand Colors */
 :root {
-  --wowlyx-yellow: #FFD539;
-  --wowlyx-cream-1: #F8EFDB;
-  --wowlyx-cream-2: #FEFBF4;
-  --wowlyx-black: #000000;
-  --wowlyx-white: #FFFFFF;
+  --wowlyx-yellow: #ffd539;
+  --wowlyx-cream-1: #f8efdb;
+  --wowlyx-cream-2: #fefbf4;
+  --wowlyx-black: #000;
+  --wowlyx-white: #fff;
 }
 
 /* ✅ Section Wrapper */
@@ -811,42 +818,11 @@ document.addEventListener('DOMContentLoaded', function() {
   align-items: center;
 }
 
-/* ✅ Header Outside */
+/* ✅ Header */
 .wowlyx-header {
   max-width: 900px;
   text-align: center;
   margin-bottom: 3rem;
-}
-
-.wowlyx-buttons .btn-primary,
-.wowlyx-buttons .btn-outline {
-  padding: 0.8rem 1.6rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 999px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.btn-primary {
-  background: var(--wowlyx-yellow);
-  color: var(--wowlyx-black);
-  box-shadow: 0 4px 10px rgba(255, 213, 57, 0.3);
-}
-
-.btn-primary:hover {
-  background: #ffcd00;
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--wowlyx-black);
-  border: 2px solid var(--wowlyx-yellow);
-}
-
-.btn-outline:hover {
-  background: var(--wowlyx-yellow);
-  color: var(--wowlyx-black);
 }
 
 /* ✅ Main Card Container */
@@ -867,7 +843,7 @@ document.addEventListener('DOMContentLoaded', function() {
   gap: 2rem;
 }
 
-/* ✅ Feature Cards */
+/* ✅ Cards */
 .wowlyx-card {
   position: relative;
   background: var(--wowlyx-white);
@@ -875,7 +851,7 @@ document.addEventListener('DOMContentLoaded', function() {
   padding: 2rem;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
   border: 1px solid rgba(0, 0, 0, 0.05);
-  opacity: 0; /* Animation start */
+  opacity: 0;
   transform: translateY(40px);
   transition: all 0.35s ease;
 }
@@ -889,11 +865,33 @@ document.addEventListener('DOMContentLoaded', function() {
 .wowlyx-card--large {
   grid-area: 1 / 1 / 3 / 2;
   background: var(--wowlyx-cream-1);
+  padding: 0;
+  overflow: hidden;
 }
 
 .wowlyx-card--wide {
   grid-area: 3 / 2 / 4 / 4;
   background: #fffbe6;
+}
+
+/* ✅ Video Styling */
+.wowlyx-video {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.8rem;
+  overflow: hidden;
+}
+
+.wowlyx-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1);
+  transition: transform 0.4s ease;
+}
+
+.wowlyx-card--large:hover .wowlyx-video video {
+  transform: scale(1.2);
 }
 
 /* ✅ Icon */
@@ -911,7 +909,6 @@ document.addEventListener('DOMContentLoaded', function() {
   box-shadow: 0 6px 16px rgba(255, 213, 57, 0.4);
 }
 
-/* ✅ Typography */
 .wowlyx-card h2 {
   font-size: 1.6rem;
   font-weight: 700;
@@ -925,25 +922,6 @@ document.addEventListener('DOMContentLoaded', function() {
   line-height: 1.6;
 }
 
-/* ✅ Gradient Border Hover */
-.wowlyx-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 1.8rem;
-  padding: 2px;
-  background: linear-gradient(135deg, var(--wowlyx-yellow), #ffc107);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.35s;
-}
-
-.wowlyx-card:hover::after {
-  opacity: 1;
-}
-
 /* ✅ Responsive */
 @media (max-width: 1024px) {
   .wowlyx-grid {
@@ -952,6 +930,7 @@ document.addEventListener('DOMContentLoaded', function() {
   .wowlyx-card--large,
   .wowlyx-card--wide {
     grid-area: unset;
+    height: 450px;
   }
 }
 
@@ -962,20 +941,24 @@ document.addEventListener('DOMContentLoaded', function() {
   .wowlyx-card {
     padding: 1.8rem;
   }
-  .wowlyx-card h2 {
-    font-size: 1.5rem;
+  .wowlyx-card--large {
+    height: 500px;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
   }
 }
 </style>
 
 <script>
 lucide.createIcons();
-
-// ✅ GSAP Scroll Animation
 gsap.registerPlugin(ScrollTrigger);
 
+// ✅ Card Animation
 gsap.utils.toArray(".wowlyx-card").forEach(card => {
-  gsap.fromTo(card,
+  gsap.fromTo(
+    card,
     { opacity: 0, y: 50, scale: 0.95 },
     {
       opacity: 1,
@@ -986,16 +969,12 @@ gsap.utils.toArray(".wowlyx-card").forEach(card => {
       scrollTrigger: {
         trigger: card,
         start: "top 85%",
-        end: "bottom 20%",
-        toggleActions: "play reverse play reverse"
+        toggleActions: "play none none reverse"
       }
     }
   );
 });
 </script>
-
-
-
 
 
 
@@ -1511,14 +1490,14 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="contact-card">
       <div class="contact-icon"><i data-lucide="mail"></i></div>
       <h3>Email</h3>
-      <p><a href="mailto:hello@techspire.ai" class="contact-link">hello@techspire.ai</a></p>
+      <p><a href="mailto:hello@techspire.ai" class="">hello@techspire.ai</a></p>
     </div>
 
     <!-- Phone Card -->
     <div class="contact-card">
       <div class="contact-icon"><i data-lucide="phone"></i></div>
       <h3>Phone</h3>
-      <p><a href="tel:+65XXXXXXXX" class="contact-link">+65 XXXX XXXX</a></p>
+      <p><a href="tel:+65XXXXXXXX" class="">+65 XXXX XXXX</a></p>
     </div>
 
     <!-- Location Card -->
