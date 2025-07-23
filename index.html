@@ -554,7 +554,7 @@
   <div id="animation-container">
     <!-- ✅ Cards -->
     <div class="card">
-      <img src="./futuristic-portrait-young-girl-with-high-tech.jpg" alt="Smart School">
+      <img src="./2151111276.jpg" alt="Smart School">
       <div class="card-content">
         <div class="card-category">Smart School</div>
         <div class="card-title">KiDQ</div>
@@ -567,7 +567,7 @@
     </div>
 
     <div class="card">
-      <img src="./man-working-computer-with-data-analysis-security-screen.jpg" alt="AI Command Center">
+      <img src="./2151908090.jpg" alt="AI Command Center">
       <div class="card-content">
         <div class="card-category">AI Security</div>
         <div class="card-title">WatchTower</div>
@@ -1002,26 +1002,24 @@ gsap.utils.toArray(".wowlyx-card").forEach(card => {
 
 
 <section class="custom-solutions-wrapper">
-  <!-- ✅ Heading Outside -->
-  <div class="custom-header">
+  <!-- ✅ Heading -->
   <div class="max-w-7xl mx-auto text-center mb-16 underline-container">
     <h2 class="text-3xl sm:text-4xl font-light text-black mb-4">
-      Need something 
+      Need something
       <span class="relative inline-block ml-2 pb-4">
-        <span class="text-3xl sm:text-4xl font-light text-black">Specific? </span>
-        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-900 to-purple-600"></span>
+        <span class="text-3xl sm:text-4xl font-light text-black">Specific?</span>
+        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-blue-600 to-cyan-500"></span>
       </span>
     </h2>
     <p class="text-gray-700 text-base sm:text-lg font-light">
       We design and deliver custom AI and IoT solutions using the same platform and core capabilities.
     </p>
   </div>
-  </div>
 
   <!-- ✅ Bento Grid -->
   <div class="custom-bento-grid">
     <!-- Large Card -->
-    <div class="custom-card custom-card--large">
+    <div class="custom-card large">
       <div class="custom-icon"><i data-lucide="settings"></i></div>
       <h3>Smart Automation</h3>
       <p>Tailored automation for unique spaces and operational needs.</p>
@@ -1035,14 +1033,14 @@ gsap.utils.toArray(".wowlyx-card").forEach(card => {
     </div>
 
     <!-- Tall Card -->
-    <div class="custom-card custom-card--tall">
+    <div class="custom-card tall">
       <div class="custom-icon"><i data-lucide="cpu"></i></div>
       <h3>Device Integration</h3>
       <p>Seamless connectivity and control for your IoT devices.</p>
     </div>
 
     <!-- Wide Card -->
-    <div class="custom-card custom-card--wide">
+    <div class="custom-card wide">
       <div class="custom-icon"><i data-lucide="bar-chart"></i></div>
       <h3>Live Dashboards</h3>
       <p>Real-time dashboards and actionable reports for smarter decisions.</p>
@@ -1063,50 +1061,21 @@ gsap.utils.toArray(".wowlyx-card").forEach(card => {
   </div>
 </section>
 
-<script>
-  lucide.createIcons();
+<!-- ✅ Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
 
-  gsap.utils.toArray(".custom-card").forEach(card => {
-    gsap.fromTo(card,
-      { opacity: 0, y: 60, scale: 0.95 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: card,
-          start: "top 85%",
-          end: "bottom 20%",
-          toggleActions: "play reverse play reverse"
-        }
-      }
-    );
-  });
-</script>
-
+<!-- ✅ Styles -->
 <style>
 :root {
-  --custom-primary: #9333ea;
-  --custom-secondary: #ec4899;
-  --custom-bg: #faf5ff;
+  --accent-start: #9333ea;
+  --accent-end: #ec4899;
+  --custom-bg: #f9fafb;
 }
 
 /* ✅ Section Wrapper */
 .custom-solutions-wrapper {
-  padding: 5rem 1rem;
   background: var(--custom-bg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-}
-
-/* ✅ Heading Block */
-.custom-header {
-  text-align: center;
-  max-width: 800px;
+  padding: 5rem 1rem;
 }
 
 /* ✅ Bento Grid */
@@ -1114,25 +1083,40 @@ gsap.utils.toArray(".wowlyx-card").forEach(card => {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  width: 100%;
   max-width: 1300px;
+  margin: 0 auto;
 }
 
 /* ✅ Cards */
 .custom-card {
   background: #fff;
-  border-radius: 1.8rem;
   padding: 2rem;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .custom-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 45px rgba(147, 51, 234, 0.25);
+  box-shadow: 0 18px 40px rgba(147, 51, 234, 0.25);
+}
+
+.custom-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.custom-card:hover::after {
+  opacity: 0.08;
 }
 
 /* ✅ Icon */
@@ -1143,47 +1127,58 @@ gsap.utils.toArray(".wowlyx-card").forEach(card => {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
   color: #fff;
   font-size: 1.5rem;
   margin-bottom: 0.8rem;
-  background: linear-gradient(135deg, var(--custom-primary), var(--custom-secondary));
   box-shadow: 0 6px 16px rgba(147, 51, 234, 0.4);
+  position: relative;
+  z-index: 1;
 }
 
-/* ✅ Typography */
+.custom-icon i {
+  width: 28px;
+  height: 28px;
+}
+
+/* ✅ Text */
 .custom-card h3 {
   font-size: 1.4rem;
   font-weight: 700;
   color: #111827;
   margin-bottom: 0.4rem;
+  position: relative;
+  z-index: 1;
 }
 
 .custom-card p {
-  color: #4b556b;
+  color: #4b5563;
   font-size: 1rem;
   line-height: 1.6;
+  position: relative;
+  z-index: 1;
 }
 
-/* ✅ Special Sizes for Bento */
-.custom-card--large {
+/* ✅ Special Sizes */
+.custom-card.large {
   grid-column: span 2;
   grid-row: span 2;
-  background: #fef3ff;
 }
 
-.custom-card--tall {
-  grid-row: span 2;
-}
-
-.custom-card--wide {
+.custom-card.wide {
   grid-column: span 2;
+}
+
+.custom-card.tall {
+  grid-row: span 2;
 }
 
 /* ✅ Buttons */
 .custom-cta {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
+  justify-content: center;
   gap: 1.2rem;
 }
 
@@ -1198,22 +1193,23 @@ gsap.utils.toArray(".wowlyx-card").forEach(card => {
 }
 
 .custom-btn.primary {
-  background: linear-gradient(135deg, var(--custom-primary), var(--custom-secondary));
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
   color: #fff;
 }
 
 .custom-btn.primary:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(147, 51, 234, 0.35);
 }
 
 .custom-btn.secondary {
   background: #fff;
-  border: 2px solid var(--custom-primary);
-  color: var(--custom-primary);
+  border: 2px solid var(--accent-start);
+  color: var(--accent-start);
 }
 
 .custom-btn.secondary:hover {
-  background: var(--custom-primary);
+  background: var(--accent-start);
   color: #fff;
 }
 
@@ -1222,9 +1218,9 @@ gsap.utils.toArray(".wowlyx-card").forEach(card => {
   .custom-bento-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .custom-card--large,
-  .custom-card--tall,
-  .custom-card--wide {
+  .custom-card.large,
+  .custom-card.wide,
+  .custom-card.tall {
     grid-column: span 2;
     grid-row: auto;
   }
@@ -1236,6 +1232,32 @@ gsap.utils.toArray(".wowlyx-card").forEach(card => {
   }
 }
 </style>
+
+<!-- ✅ GSAP Animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.utils.toArray('.custom-card').forEach((card, i) => {
+    gsap.to(card, {
+      opacity: 1,
+      y: 0,
+      duration: 0.9,
+      delay: i * 0.15,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      }
+    });
+  });
+});
+</script>
+
 
 
 <section class="spaces-wrapper">
@@ -1312,9 +1334,11 @@ gsap.utils.toArray(".wowlyx-card").forEach(card => {
 :root {
   --bento-bg: #f8fafc;
   --bento-card: #fff;
-  --accent-start: #2563eb; /* Blue-600 */
-  --accent-end: #06b6d4;   /* Cyan-500 */
+  --accent-start: #9333ea; /* Blue-600 */
+  --accent-end: #ec4899;   /* Cyan-500 */
 }
+
+
 
 .spaces-wrapper {
   background: var(--bento-bg);
@@ -1465,15 +1489,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 <section class="contact-wrapper">
   <!-- ✅ Heading -->
   <div class="max-w-7xl mx-auto text-center mb-12 underline-container">
     <h2 class="text-3xl sm:text-4xl font-light text-gray-900 mb-4">
-      Get in 
+      Get in
       <span class="relative inline-block ml-2 pb-4">
         <span class="text-3xl sm:text-4xl font-light text-gray-900">Touch</span>
-        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-[#AD00A1]"></span>
+        <span class="scroll-underline absolute left-0 bottom-0 h-[3px] w-full bg-gradient-to-r from-purple-600 to-pink-500"></span>
       </span>
     </h2>
     <p class="text-gray-700 text-base sm:text-lg font-light">
@@ -1505,7 +1528,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <p>Singapore</p>
     </div>
 
-    <!-- Big Card -->
+    <!-- Large CTA Card -->
     <div class="contact-card large">
       <h3 class="mb-4 text-xl font-semibold">Ready to Get Started?</h3>
       <p class="mb-6 text-gray-600 text-base">Choose an option below to connect with us.</p>
@@ -1520,11 +1543,12 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- ✅ Lucide Icons -->
 <script src="https://unpkg.com/lucide@latest"></script>
 
+<!-- ✅ CSS Styling -->
 <style>
 :root {
+  --accent-start: #9333ea;  /* Purple */
+  --accent-end: #ec4899;    /* Pink */
   --contact-bg: #f9fafb;
-  --contact-card: #fff;
-  --accent: #AD00A1; /* Main brand color */
 }
 
 .contact-wrapper {
@@ -1532,17 +1556,18 @@ document.addEventListener('DOMContentLoaded', () => {
   padding: 5rem 1rem;
 }
 
+/* ✅ Bento Grid */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* ✅ Cards */
 .contact-card {
-  background: var(--contact-card);
+  background: #fff;
   padding: 2rem;
   border-radius: 1.5rem;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
@@ -1553,31 +1578,30 @@ document.addEventListener('DOMContentLoaded', () => {
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   opacity: 0;
   transform: translateY(40px);
+  position: relative;
+  overflow: hidden;
 }
 
-.contact-card.large {
-  grid-column: span 3;
-  text-align: center;
+.contact-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
 }
 
-.contact-card h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
+.contact-card:hover::after {
+  opacity: 0.08;
 }
 
-.contact-card p {
-  font-size: 1rem;
-  color: #4b5563;
+.contact-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(147, 51, 234, 0.25);
 }
 
-.contact-link {
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-}
-
+/* ✅ Icon */
 .contact-icon {
   width: 60px;
   height: 60px;
@@ -1586,24 +1610,56 @@ document.addEventListener('DOMContentLoaded', () => {
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem;
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
   color: #fff;
   font-size: 1.6rem;
-  box-shadow: 0 6px 16px rgba(173, 0, 161, 0.3);
+  box-shadow: 0 6px 16px rgba(147, 51, 234, 0.3);
+  position: relative;
+  z-index: 1;
 }
 
-.contact-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 18px 40px rgba(173, 0, 161, 0.25);
+.contact-icon i {
+  width: 28px;
+  height: 28px;
 }
 
-/* ✅ Buttons */
+/* ✅ Text */
+.contact-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: #4b5563;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-link {
+  color: var(--accent-start);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ✅ Large CTA Card */
+.contact-card.large {
+  grid-column: span 3;
+  text-align: center;
+}
+
 .contact-buttons {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  margin-top: 1rem;
 }
 
+/* ✅ Buttons */
 .btn-primary,
 .btn-outline {
   padding: 0.8rem 1.6rem;
@@ -1615,29 +1671,30 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: #88007b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(147, 51, 234, 0.35);
 }
 
 .btn-outline {
-  border: 2px solid var(--accent);
-  color: var(--accent);
+  border: 2px solid var(--accent-start);
+  color: var(--accent-start);
   background: transparent;
 }
 
 .btn-outline:hover {
-  background: var(--accent);
+  background: var(--accent-start);
   color: #fff;
 }
 
 /* ✅ Responsive */
 @media (max-width: 1024px) {
   .contact-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   .contact-card.large {
     grid-column: span 2;
@@ -1654,7 +1711,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 </style>
 
-<!-- ✅ GSAP Animation -->
+<!-- ✅ GSAP Animations -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script>
@@ -1678,6 +1735,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+
 
 
 
